@@ -8,7 +8,7 @@
  "creation": "2025-03-18 15:38:39.482529",
  "description": "Supplier of Goods or Services.",
  "doctype": "DocType",
- "document_type": "Setup",
+ "document_type": "Document",
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
@@ -80,7 +80,8 @@
   "release_date",
   "portal_users_tab",
   "portal_users",
-  "column_break_1mqv"
+  "column_break_1mqv",
+  "amended_from"
  ],
  "fields": [
   {
@@ -509,10 +510,21 @@
    "fieldname": "payment_terms_entry",
    "fieldtype": "Data",
    "label": "Payment Terms Entry"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Supplier Onboarding Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "icon": "fa fa-user",
  "image_field": "image",
+ "is_submittable": 1,
  "links": [
   {
    "group": "Allowed Items",
@@ -520,7 +532,7 @@
    "link_fieldname": "party"
   }
  ],
- "modified": "2025-03-18 17:11:20.778971",
+ "modified": "2025-03-18 18:25:28.278743",
  "modified_by": "Administrator",
  "module": "Supplier Onboarding",
  "name": "Supplier Onboarding Request",
@@ -576,6 +588,20 @@
    "read": 1,
    "report": 1,
    "role": "Accounts Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
   }
  ],
  "quick_entry": 1,
